@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product List</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__navbar navbar">
+        <div class="navbar__logo">LOGO</div>
+        <div class="navbar__mobile-menu mobile-menu">
+          <a id="menu-open" href="javascript:void(0)">
+            <span class="mobile-menu__line"></span>
+            <span class="mobile-menu__line"></span>
+            <span class="mobile-menu__line"></span>
+          </a>
+        </div>
+        <nav class="navbar__mobile-hide mobile-hide" id="mobile-hide">
+          <a id="menu-close" href="javascript:void(0)"> Close </a>
+          <a href="#" class="active">Home</a>
+          <a href="#">Women</a>
+          <a href="#">Men</a>
+          <a href="#">Smart Gear</a>
+          <a href="#">Accessories</a>
+        </nav>
+        <div class="navbar__cart">CART</div>
+      </div>
+    </header>
+    <section class="banner">
+      <div class="banner__title">
+        <h1>
+          Men's <br />
+          Outerwear
+        </h1>
+      </div>
+      <div class="banner__image"></div>
+    </section>
+    <main class="main">
+      <div class="container">
+        <section class="container__left-section left-section">
+          <div class="left-section__breadcrum">
+            Clothing / Women's / Outerwear
+          </div>
+          <div class="left-section__mobile-filter mobile-show">
+            <a href="javascript:void(0)" id="filter-show"
+              ><img
+                src="assests/sliders.svg"
+                alt="Filter Result"
+                height="16"
+                width="16"
+              />
+              Filter Results</a
+            >
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="javascript:void(0)" id="sorting-show">
+              <img
+                src="assests/arrow-down.svg"
+                alt="Sort Result"
+                height="13"
+                width="10"
+              /><img
+                src="assests/arrow-up.svg"
+                alt="Sort Result"
+                height="13"
+                width="10"
+              />
+              Sort Products</a
+            >
+          </div>
+          <div class="left-section__controls controls mobile-hide" id="filter">
+            <input
+              type="text"
+              id="search"
+              placeholder="Search products..."
+              aria-label="Search products"
+            />
+            <div class="controls__filter-title">Filters</div>
+            <div class="controls__filter-subtitle">Categories</div>
+            <div id="filter-categories" class="controls__checkbox-group"></div>
+            <div
+              id="price-range-container"
+              class="controls__price-range-container"
+            >
+              <label for="price-range">Price Range</label>
+              <div class="controls__price-range">
+                <span>$0</span>
+                <input
+                  type="range"
+                  id="price-range"
+                  min="0"
+                  value="100"
+                  max="1000"
+                  step="10"
+                  aria-label="Price range"
+                />
+                <span>$1000</span>
+              </div>
+              <span id="price-range-value" class="controls__price-value"
+                >$100</span
+              >
+            </div>
+          </div>
+        </section>
+        <section class="container__right-section right-section">
+          <div
+            class="right-section__controls controls mobile-hide"
+            id="sorting"
+          >
+            <select id="sort" aria-label="Sort products">
+              <option value="default">Sort by Price</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+            </select>
+          </div>
+          <div id="products" class="right-section__product-grid"></div>
+          <div
+            id="shimmer"
+            class="right-section__shimmer-grid"
+            aria-hidden="true"
+          ></div>
+          <button
+            id="load-more"
+            class="right-section__load-more"
+            aria-label="Load more products"
+          >
+            Load More
+          </button>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="container__row row">
+          <h2 class="row__title">Account</h2>
+          <ul class="row__list">
+            <li><a href="#">Sign In</a></li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">Order Status</a></li>
+          </ul>
+        </div>
+        <div class="row">
+          <h2 class="row__title">About Us</h2>
+          <ul class="row__list">
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="row">
+          <h2 class="row__title">Help</h2>
+          <ul class="row__list">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Order Status</a></li>
+            <li><a href="#">Returns</a></li>
+          </ul>
+        </div>
+        <div class="row">
+          <h2 class="row__title">Follow Us!</h2>
+          <p class="row__paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore.
+          </p>
+        </div>
+      </div>
+      <div class="footer__bottom-border"></div>
+      <div class="container">
+        <div class="container__footer-logo">LOGO</div>
+        <div class="container__company-name">
+          <span
+            >© Company Name <span>Address Ave, City Name, State ZIP</span></span
+          >
+        </div>
+        <div class="container__privacy-link">
+          <a href="">Terms of Use</a> &nbsp;&nbsp;&nbsp;
+          <a href="">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
